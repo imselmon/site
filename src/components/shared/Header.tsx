@@ -31,7 +31,7 @@ const NavLink = ({ href, isExact, children, ...props }: NavLinkProps) => {
     >
       {children}
       {isActive && (
-        <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary/0 via-primary/40 to-teal-500/0 dark:from-primary/0 dark:via-primary/40 dark:to-primary/0"></span>
+        <span className="from-primary/0 via-primary/40 dark:from-primary/0 dark:via-primary/40 dark:to-primary/0 absolute inset-x-1 -bottom-px h-px bg-gradient-to-r to-teal-500/0"></span>
       )}
     </Link>
   );
@@ -56,9 +56,6 @@ export default function Header() {
             </li>
             <li>
               <NavLink href="/uses">Uses</NavLink>
-            </li>
-            <li>
-              <NavLink href="/books">Books</NavLink>
             </li>
           </ul>
         </nav>

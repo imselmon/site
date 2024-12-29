@@ -19,30 +19,22 @@ export default function Footer() {
           <li>
             <Link
               className="plain text-xs text-gray-400 dark:text-gray-600"
-              href="https://skcript.com"
-              target="_blank"
-            >
-              Skcript
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="plain text-xs text-gray-400 dark:text-gray-600"
-              href="https://developers.google.com/profile/u/varunrajm"
+              href="https://developers.google.com/profile/u/imselmon"
               target="_blank"
             >
               Developer Profile
             </Link>
           </li>
-          <li>
-            <Link
-              className="plain text-xs text-gray-400 dark:text-gray-600"
-              href="/projects"
-            >
-              Projects
-            </Link>
-          </li>
+          {/* <li> */}
+          {/*  <Link */}
+          {/*    className="plain text-xs text-gray-400 dark:text-gray-600" */}
+          {/*    href="/projects" */}
+          {/*  > */}
+          {/*    Projects */}
+          {/*  </Link> */}
+          {/* </li> */}
         </ul>
+
         <p className="inline font-mono text-xs text-gray-400 dark:text-gray-600">
           Copyright &copy; {new Date().getFullYear()} {AppConfig.site_name}
         </p>

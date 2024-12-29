@@ -5,21 +5,16 @@ import Title from '../ui/Title';
 
 const images = [
   {
-    alt: 'Picture Four',
-    src: '/assets/press-kit/picture_four.jpg',
+    alt: 'Picture One',
+    src: '/assets/press-kit/picture_1.jpg',
   },
   {
-    alt: 'Picture Five',
-    src: '/assets/press-kit/picture_five.jpg',
+    alt: 'Picture Two',
+    src: '/assets/press-kit/picture_2.jpeg',
   },
   {
     alt: 'Picture Three',
-    src: '/assets/press-kit/picture_three.jpg',
-  },
-
-  {
-    alt: 'Picture Two',
-    src: '/assets/press-kit/picture_two.JPG',
+    src: '/assets/press-kit/picture_3.jpeg',
   },
 ];
 

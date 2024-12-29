@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import { AppConfig } from '@/utils/AppConfig';
@@ -21,26 +19,29 @@ const About = () => (
     </div>
     <div className="space-y-3 text-base font-normal">
       <p>
-        I&apos;m a technology entrepreneur from India 🇮🇳, running{' '}
-        <a href="https://skcript.com" target="_blank">
-          Skcript
+        I&apos;m Salman Shaikh, a technology entrepreneur from India 🇮🇳,
+        specializing in JavaScript Fullstack, Firebase, Kotlin, and Product
+        Development. I am the Founder of{' '}
+        <a href="https://scattr.io" target="_blank">
+          Scattr.io
         </a>{' '}
-        - a ten year old software technology company, building products that
-        makes product owners life easier to build and manage their products.
+        and{' '}
+        <a href="#" target="_blank">
+          Triplist
+        </a>
+        .
       </p>
       <p>
-        Been into the industry for more than 10 years now, and the world of web
-        technology kept me fasicnated, built most of my projects with Javascript
-        and Typescript eco-system.
+        Over the past 3 years, I&apos;ve been actively contributing to developer
+        communities like Google Developer Groups, Kotlin, and KaiOS. My journey
+        in tech has revolved around building scalable products using JavaScript
+        and TypeScript ecosystems, driven by my passion for solving real-world
+        problems.
       </p>
       <p>
-        I love traveling and exploring new places, mainly the trips that
-        involves adventure and nature. More into books and music. I love
-        collecting souvenirs from every travel I make. I&apos;ve a thing for
-        really{' '}
-        <Link href="/blog/why-we-should-care-about-good-design">
-          good design.
-        </Link>
+        I love traveling and exploring new places, especially those involving
+        adventure and nature. I enjoy reading books, listening to music, and
+        mentoring developers.
       </p>
     </div>
     <div className="mt-10">
@@ -48,22 +49,13 @@ const About = () => (
       <ul className="mt-3 flex flex-col space-y-4">
         <li>
           <h4 className="text-base font-normal">
-            <a href="https://featureos.app" className="plain" target="_blank">
-              featureOS.app
+            <a href="#" className="plain" target="_blank">
+              Triplist
             </a>
           </h4>
           <p className="text-sm font-normal">
-            A feature management tool for product owners to manage their product
-          </p>
-        </li>
-        <li>
-          <h4 className="text-base font-normal">
-            <a href="https://guidekit.app" className="plain" target="_blank">
-              guidekit.app
-            </a>
-          </h4>
-          <p className="text-sm font-normal">
-            Helps product users create quick help workflows
+            A platform simplifying tour and trek organization, providing tools
+            like custom landing pages and marketing poster generation.
           </p>
         </li>
       </ul>

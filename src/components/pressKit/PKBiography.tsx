@@ -18,8 +18,10 @@ export default function PKBiography() {
         </p>
         <blockquote className="border-l-4 border-primary pl-4">
           <p className="text-lg italic">
-            Co-Founder and CIO at Skcript, Google Developer Expert for Firebase,
-            and a software developer from India.
+            Salman Shaikh is a JavaScript Fullstack developer, Firebase expert,
+            Kotlin enthusiast, and product developer. He is the Founder of
+            Scattr.io and CEO at Yuva, contributing to developer communities for
+            over 3 years.
           </p>
         </blockquote>
       </div>
@@ -29,18 +31,24 @@ export default function PKBiography() {
         </p>
         <blockquote className="border-l-4 border-primary pl-4">
           <p className="text-lg italic">
-            Varun Raj Manoharan is an entrepreneur and a software developer from
-            India, Currently running Skcript Technologies Pvt, Ltd. a software
-            consulting company based out of Chennai, India. He is also a Google
-            Developer Expert for Firebase.
+            Salman Shaikh is an entrepreneur and software developer with a
+            strong focus on JavaScript Fullstack, Firebase, and Kotlin
+            development. As the Founder of SaaS products Scattr.io and Triplist,
+            he is passionate about building innovative tools that solve
+            real-world problems. He also serves as the CEO at Yuva, driving
+            impactful product development and leadership.
             <br />
             <br />
-            He is into the software industry for more than 10 years now, and the
-            world of web technology, Spent most of his time with Javascript and
-            Typescript eco-system.
-            <br /> <br />
-            He loves traveling and exploring new places, mainly the trips that
-            involves adventure and nature. Reads a lot of novels.
+            For over 3 years, Salman has been actively contributing to developer
+            communities, including Google Developer Groups, Kotlin, and KaiOS,
+            sharing his expertise and nurturing talent. He enjoys exploring
+            emerging technologies, solving complex problems, and fostering
+            collaboration among developers.
+            <br />
+            <br />
+            Beyond his professional endeavors, Salman is deeply interested in
+            mentoring and empowering young developers, believing in the
+            potential of technology to create meaningful change.
           </p>
         </blockquote>
       </div>

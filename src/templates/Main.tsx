@@ -10,7 +10,7 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="w-full px-3 text-gray-700 antialiased md:px-3 dark:text-gray-400">
+  <div className="w-full px-3 text-gray-700 antialiased dark:text-gray-400 md:px-3">
     {props.meta}
 
     <div className="mx-auto flex h-screen max-w-screen-md flex-col justify-between">

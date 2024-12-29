@@ -5,23 +5,23 @@ import Title from '../ui/Title';
 const LINKS = [
   {
     name: 'Twitter',
-    url: 'https://twitter.com/zathvarun',
+    url: 'https://twitter.com/imselmon',
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/varunrajm/',
+    url: 'https://www.linkedin.com/in/imselmon/',
   },
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/varunraj22/',
+    url: 'https://www.instagram.com/imselmon/',
   },
   {
     name: 'Threads',
-    url: 'https://www.threads.net/varunraj22/',
+    url: 'https://www.threads.net/imselmon/',
   },
   {
-    name: 'Facebook',
-    url: 'https://www.facebook.com/zathvarun/',
+    name: 'Peerlist',
+    url: 'https://peerlist.io/imselmon/',
   },
 ];
 export default function PKSocialLinks() {

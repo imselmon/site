@@ -1,5 +1,3 @@
-import type { Post } from 'contentlayer/generated';
-import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import type {
   GetStaticPaths,
@@ -7,13 +5,20 @@ import type {
   InferGetStaticPropsType,
 } from 'next';
 import Link from 'next/link';
-import { useMDXComponent } from 'next-contentlayer/hooks';
-import { ArticleJsonLd } from 'next-seo';
+import RSSParser from 'rss-parser';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
 import { AppConfig } from '../../utils/AppConfig';
+
+type Post = {
+  title: string;
+  link: string;
+  content: string;
+  date: string;
+  slug: string;
+};
 
 type IBlogUrl = {
   slug: string;
@@ -25,7 +30,6 @@ type IPropType = {
 
 const Blog = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { post } = props;
-  const Component = useMDXComponent(post?.body.code || '');
 
   if (!post) return <div>404</div>;
 
@@ -34,22 +38,13 @@ const Blog = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       meta={
         <Meta
           title={`${post.title} | ${AppConfig.site_name}`}
-          description={post.description}
+          description={post.content.slice(0, 150)}
         />
       }
     >
-      <ArticleJsonLd
-        authorName={AppConfig.author}
-        datePublished={post.date}
-        description={post.description}
-        title={post.title}
-        publisherName={AppConfig.author}
-        url={`${AppConfig.url}/blog/${post.slug}`}
-        images={[post.cover]}
-      />
       <div className="flex justify-between">
         <Link href="/blog" className="plain text-xs">
-          <>⬅️ Back</>
+          ⬅️ Back
         </Link>
       </div>
 
@@ -58,41 +53,50 @@ const Blog = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </h1>
 
       <div className="mb-10 mt-3 flex items-center justify-between space-x-2">
-        <Link href={`/blog/${post.slug}`} className="plain">
-          <time
-            dateTime={post.date}
-            className="block font-mono text-xs dark:text-gray-200"
-          >
-            ⏰ {format(parseISO(post.date), 'LLLL d, yyyy')}
-          </time>
-        </Link>
-        <p className="text-xs">{post.readingTime.text}</p>
+        <time
+          dateTime={post.date}
+          className="block font-mono text-xs dark:text-gray-200"
+        >
+          ⏰ {format(parseISO(post.date), 'LLLL d, yyyy')}
+        </time>
       </div>
 
-      <article className="prose w-full dark:prose-invert dark:text-gray-400">
-        <Component />
-      </article>
+      <article className="prose w-full dark:prose-invert dark:text-gray-400"></article>
     </Main>
   );
 };
 
 export const getStaticPaths: GetStaticPaths<IBlogUrl> = async () => {
+  const parser = new RSSParser();
+  const feed = await parser.parseURL('https://imselmon.medium.com/feed');
+
+  const paths = feed.items.map((item) => ({
+    params: { slug: item.link?.split('/').pop() || '' },
+  }));
+
   return {
-    paths: allPosts
-      .filter((p) => !p.draft)
-      .map((p) => ({
-        params: { slug: p.slug },
-      })),
-    fallback: false,
+    paths,
+    fallback: false, // Change to 'blocking' if you want on-demand generation for new slugs
   };
 };
 
 export const getStaticProps: GetStaticProps<IPropType, IBlogUrl> = async ({
   params,
 }) => {
-  const post = allPosts
-    .filter((p) => !p.draft)
-    .find((p) => p.slug === params!.slug);
+  const parser = new RSSParser();
+  const feed = await parser.parseURL('https://imselmon.medium.com/feed');
+
+  console.log(feed.items);
+  const post = feed.items
+    .map((item) => ({
+      title: item.title || 'Untitled',
+      link: item.link || '#',
+      content: item['content:encoded'] || '',
+      date: item.isoDate || new Date().toISOString(),
+      slug: item.link?.split('/').pop() || '',
+    }))
+    .find((item) => item.slug === params!.slug);
+
   return {
     props: {
       post,

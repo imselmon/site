@@ -1,10 +1,10 @@
 export const AppConfig = {
-  site_name: 'Varun Raj Manoharan',
-  title: 'Varun Raj Manoharan',
-  headline: 'Software Developer, SaaS Founder & Travel Enthusiast',
-  description:
-    'Software Developer, SaaS Founder & Travel Enthusiast from India 🇮🇳',
+  site_name: 'Salman Shaikh (Zain)',
+  title: 'Salman Shaikh (Zain)',
+  headline:
+    ' Fullstack Developer | Saas Builder | Kotlin | Product Development ',
+  description: '',
   locale: 'en',
-  url: 'https://varunraj.in',
-  author: 'Varun Raj Manoharan',
+  url: 'https://imselmon.me',
+  author: 'Salman Shaikh (@imselmon)',
 };
