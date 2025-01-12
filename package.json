@@ -4,7 +4,7 @@
   "scripts": {
     "next-dev": "next dev",
     "dev": "run-p contentlayer-dev next-dev",
-    "build": "yarn run contentlayer-build && yarn run build:books && next build && yarn run sitemap",
+    "build": "yarn run contentlayer-build && next build && yarn run sitemap",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "export": "next export",
