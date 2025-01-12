@@ -11,7 +11,7 @@ type IMetaProps = {
 };
 
 const OG_IMAGE_MAP = {
-  '/': '/assets/og-images/home.png',
+  '/': '/assets/og-images/og-meta.png',
   '/blog': '/assets/og-images/blog.png',
   '/blog/[slug]': '/assets/og-images/blog.png',
   '/about': '/assets/og-images/about.png',
@@ -78,8 +78,8 @@ const Meta = (props: IMetaProps) => {
           ],
         }}
         twitter={{
-          handle: '@zathvarun',
-          site: '@zathvarun',
+          handle: '@imselmon',
+          site: '@imselmon',
           cardType: 'summary_large_image',
         }}
       />

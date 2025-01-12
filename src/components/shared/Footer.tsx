@@ -25,6 +25,15 @@ export default function Footer() {
               Developer Profile
             </Link>
           </li>
+          <li>
+            <Link
+              className="plain text-xs text-gray-400 dark:text-gray-600"
+              href="/tracker"
+            >
+              Contribution Tracker
+            </Link>
+          </li>
+
           {/* <li> */}
           {/*  <Link */}
           {/*    className="plain text-xs text-gray-400 dark:text-gray-600" */}

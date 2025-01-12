@@ -18,9 +18,7 @@
     "test": "jest",
     "commit": "cz",
     "prepare": "husky install",
-    "sitemap": "next-sitemap",
-    "get:books": "node ./scripts/rss-to-json.js",
-    "build:books": "node ./scripts/books-info.js"
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.10",
